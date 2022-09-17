@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 1125px;
+            overflow: hidden;
+            height: 2436px;
+        }
+
+        @font-face {
+            font-family: Rubik-Medium;
+            src: url("font/Rubik-Medium.otf");
+        }
+        @font-face {
+            font-family: DIN;
+            src: url("font/DIN-Bold.otf");
+        }
+        @font-face {
+            font-family: 方正黑体简体;
+            src: url("font/方正黑体简体.TTF");
+        }
+
+        @font-face {
+            font-family: 苹方香港;
+            src: url("font/Arial MT W04 Medium.woff.ttf");
+        }
+        @font-face {
+            font-family: 微软雅黑;
+            src: url("font/微软雅黑.ttf");
+        }
+        .list-box::-webkit-scrollbar {
+            width: 10px;
+        // height: 10px; // 高度写不写，都不影响，因为会根据内容的长度自动计算
+        }
+
+        .ao1:hover {
+            background-image: url('img/1x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao1 img:hover{
+            opacity: 0;
+        }
+
+        .ao2:hover {
+            background-image: url('img/2x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao2 img:hover{
+            opacity: 0;
+        }
+
+        .ao3:hover {
+            background-image: url('img/3x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao3 img:hover{
+            opacity: 0;
+        }
+
+        .ao4:hover {
+            background-image: url('img/4x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao4 img:hover{
+            opacity: 0;
+        }
+
+        .ao5:hover {
+            background-image: url('img/5x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao5 img:hover{
+            opacity: 0;
+        }
+
+        .ao6:hover {
+            background-image: url('img/6x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao6 img:hover{
+            opacity: 0;
+        }
+
+        .ao7:hover {
+            background-image: url('img/7x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao7 img:hover{
+            opacity: 0;
+        }
+
+        .ao8:hover {
+            background-image: url('img/8x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao8 img:hover{
+            opacity: 0;
+        }
+
+        .ao9:hover {
+            background-image: url('img/9x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao9 img:hover{
+            opacity: 0;
+        }
+
+        .ao10:hover {
+            background-image: url('img/10x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao10 img:hover{
+            opacity: 0;
+        }
+
+        .ao11:hover {
+            background-image: url('img/11x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao11 img:hover{
+            opacity: 0;
+        }
+
+        .ao12:hover {
+            background-image: url('img/12x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao12 img:hover{
+            opacity: 0;
+        }
+
+        .ao13:hover {
+            background-image: url('img/13x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao13 img:hover{
+            opacity: 0;
+        }
+
+        .ao14:hover {
+            background-image: url('img/14x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao14 img:hover{
+            opacity: 0;
+        }
+
+        .ao15:hover {
+            background-image: url('img/15x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao15 img:hover{
+            opacity: 0;
+        }
+
+        .ao16:hover {
+            background-image: url('img/16x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao16 img:hover{
+            opacity: 0;
+        }
+
+        .ao17:hover {
+            background-image: url('img/17x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao17 img:hover{
+            opacity: 0;
+        }
+
+        .ao18:hover {
+            background-image: url('img/18x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao18 img:hover{
+            opacity: 0;
+        }
+
+        .ao19:hover {
+            background-image: url('img/19x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao19 img:hover{
+            opacity: 0;
+        }
+
+        .ao20:hover {
+            background-image: url('img/20x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao20 img:hover{
+            opacity: 0;
+        }
+
+        .ao21:hover {
+            background-image: url('img/21x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao21 img:hover{
+            opacity: 0;
+        }
+
+        .ao22:hover {
+            background-image: url('img/22x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao22 img:hover{
+            opacity: 0;
+        }
+
+        .ao23:hover {
+            background-image: url('img/23x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao23 img:hover{
+            opacity: 0;
+        }
+
+        .ao24:hover {
+            background-image: url('img/24x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao24 img:hover{
+            opacity: 0;
+        }
+
+        .ao25:hover {
+            background-image: url('img/25x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao25 img:hover{
+            opacity: 0;
+        }
+
+        .ao26:hover {
+            background-image: url('img/26x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao26 img:hover{
+            opacity: 0;
+        }
+
+        .ao27:hover {
+            background-image: url('img/27x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao27 img:hover{
+            opacity: 0;
+        }
+
+        .ao28:hover {
+            background-image: url('img/28x.png');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            width: 200px;
+            height: 170px;
+            z-index: 9999;
+        }
+        .ao28 img:hover{
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body oncontextmenu=self.event.returnValue=false style="background-color: rgb(218,185,149)">
+<button class="save-img" onclick="savaData()"
+        style="color: rgb(218,185,149); position: absolute;border: none; padding:5px 5px 5px 5px;font-weight:550;background-color: transparent;border-radius:10px;margin-left:1300px; font-size: 35px;">保存图片
+</button>
+<div class="box">
+    <div style="background-image: url('img/xnhb9.png');height: 2436px;width: 1125px;display: flex;position:relative;">
+
+        <img src="img/tousini.png" style="position: absolute;">
+
+
+        <div style="position: absolute;left: 111px;top:348px;color: rgb(255,255,255);">
+            <div contenteditable class="textX810" style="font-weight:; font-family: 方正黑体简体;display: inline-block;font-size: 62px;">TRX</div>
+        </div>
+
+        <div style="position: absolute;left: 111px;top:420px;color: rgb(255,255,255);">
+            <div contenteditable class="textX811" style="font-weight:; font-family: 方正黑体简体;display: inline-block;font-size: 45px;">TBXhhYuRDA....efxhTtfF9p</div>
+            <div contenteditable class="" style="font-weight:; font-family: 苹方香港;display: inline-block;font-size: 50px;background-image: url('img/x9-tu-1.png');width: 30px;background-repeat: no-repeat;background-position:right bottom 15px;"> </div>
+        </div>
+
+        <div style="position: absolute;right: 93px; top:487px;color: rgb(234,252,230);">
+            <div contenteditable class="" style="font-weight:; font-family: 苹方香港;display: inline-block;font-size: 80px;background-image: url('img/x9-tu-2.png');width: 27px;background-repeat: no-repeat;"></div>
+            <div contenteditable class="textX812" style="font-weight:; font-family: 苹方香港;display: inline-block;font-size: 90px;margin-left: 20px;">0.06</div>
+        </div>
+
+        <div style="position: absolute;left: 307px; top:691px;">
+            <div contenteditable class="textX813" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(0,0,0);font-size: 45px;letter-spacing: 1px;">91.00</div>
+            <div contenteditable class="" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(0,0,0);font-size: 41px;letter-spacing: 1px;background-image: url('img/x9-tu-3.png');margin-left: 10px; width: 55px;background-repeat: no-repeat;background-position: bottom"> </div>
+        </div>
+
+        <div style="position: absolute;right: 49px; top:691px;">
+            <div contenteditable class="textX814" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(0,0,0);font-size: 45px;letter-spacing: 1px;">1.21</div>
+            <div contenteditable class="" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(0,0,0);font-size: 45px;letter-spacing: 1px;">KB</div>
+        </div>
+
+        <div style="position: absolute;right: 71px; top:1026px;">
+            <div contenteditable class="textX815" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(0,0,0);font-size: 58px;letter-spacing: 1px;">0.671</div>
+        </div>
+
+        <div style="position: absolute;right: 76px; top:1098px;">
+            <div contenteditable class="" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(135,137,136);font-size: 47px;letter-spacing: 1px;">$</div>
+            <div contenteditable class="textX816" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(135,137,136);font-size: 47px;letter-spacing: 1px;">0.06</div>
+        </div>
+
+        <div style="position: absolute;right: 71px; top:1253px;">
+            <div contenteditable class="textX817" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(0,0,0);font-size: 58px;letter-spacing: 1px;">0</div>
+        </div>
+
+        <div style="position: absolute;right: 71px; top:1329px;">
+            <div contenteditable class="" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(135,137,136);font-size: 47px;letter-spacing: 1px;">$</div>
+            <div contenteditable class="textX818" style="font-weight:; font-family: 苹方香港;display: inline-block;color: rgb(135,137,136);font-size: 47px;letter-spacing: 1px;margin-left: 5px;">0</div>
+        </div>
+
+    </div>
+</div>
+<div style="position: absolute;left: 980px;top: -100px;width: 1100px;height: 2000px;">
+
+    <div style="display: inline-block; position: absolute;right: 700px;top: 300px; font-size: 45px;">名字：
+        <div class="textG1532" contenteditable
+             style="white-space: nowrap;overflow: hidden;display: inline-block;position: absolute;height: 100px;line-height: 100px; font-size: 45px;width: 800px;background-color: #FFFFFF;">TRX</div>
+    </div>
+
+    <div style="display: inline-block; position: absolute;right: 700px;top: 450px; font-size: 39px;">地址：
+        <div class="textG1533" contenteditable
+             style="display: inline-block;position: absolute;height: 100px;line-height: 100px; font-size: 45px;width: 800px;background-color: #FFFFFF;">TBXhhYuRDA....efxhTtfF9p</div>
+    </div>
+
+    <div style="display: inline-block; position: absolute;right: 700px;top:600px; font-size: 45px;">数量：
+        <div class="textG1534" contenteditable
+             style="white-space: nowrap;overflow: hidden;display: inline-block;position: absolute;height: 100px;line-height: 100px; font-size: 45px;width: 800px;background-color: #FFFFFF;">0.06</div>
+    </div>
+
+    <div style="display: inline-block; position: absolute;right: 700px;top:750px; font-size: 37px;">能量：
+        <div class="textG1535" contenteditable
+             style="white-space: nowrap;overflow: hidden;display: inline-block;position: absolute;height: 100px;line-height: 100px; font-size: 45px;width: 800px;background-color: #FFFFFF;">91.00</div>
+    </div>
+
+    <div style="display: inline-block; position: absolute;right: 700px;top:900px; font-size: 45px;">带宽：
+        <div class="textG1536" contenteditable
+             style="white-space: nowrap;overflow: hidden;display: inline-block;position: absolute;height: 100px;line-height: 100px; font-size: 45px;width: 800px;background-color: #FFFFFF;">1.21</div>
+    </div>
+
+    <div style="display: inline-block; position: absolute;right: 700px;top:1050px; font-size: 45px;">TRX：
+        <div class="textG1537" contenteditable
+             style="white-space: nowrap;overflow: hidden;display: inline-block;position: absolute;height: 100px;line-height: 100px; font-size: 45px;width: 800px;background-color: #FFFFFF;">0.671</div>
+    </div>
+
+    <div style="display: inline-block; position: absolute;right: 700px;top:1200px; font-size: 45px;">：
+        <div class="textG1538" contenteditable
+             style="white-space: nowrap;overflow: hidden;display: inline-block;position: absolute;height: 100px;line-height: 100px; font-size: 45px;width: 800px;background-color: #FFFFFF;">0.06</div>
+    </div>
+
+    <div style="display: inline-block; position: absolute;right: 700px;top:1350px; font-size: 45px;">USDT：
+        <div class="textG1539" contenteditable
+             style="white-space: nowrap;overflow: hidden;display: inline-block;position: absolute;height: 100px;line-height: 100px; font-size: 45px;width: 800px;background-color: #FFFFFF;">0</div>
+    </div>
+
+    <div style="display: inline-block; position: absolute;right: 700px;top:1500px; font-size: 45px;">：
+        <div class="textG1540" contenteditable
+             style="white-space: nowrap;overflow: hidden;display: inline-block;position: absolute;height: 100px;line-height: 100px; font-size: 45px;width: 800px;background-color: #FFFFFF;">0</div>
+    </div>
+    
+</div>
+
+<div class="list-box" style="position: absolute;left:2130px;top:150px;width: 700px;height: 1500px;overflow-y:auto; overflow-x: hidden;">
+
+    <a class="ao1" href="http://sblaojiaoshu.com/xnhb1x/" style="position: absolute; top:100px;left: 45px;">
+        <img src="img/1.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao2" href="http://sblaojiaoshu.com/xnhb2x/" style="position: absolute; top:100px;left: 260px;">
+        <img src="img/2.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao3" href="http://sblaojiaoshu.com/xnhb3/" style="position: absolute; top:100px;left: 460px;">
+        <img src="img/3.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao4" href="http://sblaojiaoshu.com/xnhb4/" style="position: absolute; top:320px;left: 45px;">
+        <img src="img/4.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao5" href="http://sblaojiaoshu.com/xnhb5/" style="position: absolute; top:320px;left: 260px;">
+        <img src="img/5.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao6" href="http://sblaojiaoshu.com/xnhb6/" style="position: absolute; top:320px;left: 460px;">
+        <img src="img/6.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao7" href="http://sblaojiaoshu.com/xnhb7/" style="position: absolute; top:540px;left: 45px;">
+        <img src="img/7.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao8" href="http://sblaojiaoshu.com/xnhb8/" style="position: absolute; top:540px;left: 260px;">
+        <img src="img/8.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao9" href="http://sblaojiaoshu.com/xnhb9/" style="position: absolute; top:540px;left: 460px;">
+        <img src="img/9x.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao10" href="http://sblaojiaoshu.com/xnhb10/" style="position: absolute; top:760px;left: 45px;">
+        <img src="img/10.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao11" href="http://sblaojiaoshu.com/xnhb11/" style="position: absolute; top:760px;left: 260px;">
+        <img src="img/11.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao12" href="http://sblaojiaoshu.com/xnhb12/" style="position: absolute; top:760px;left: 460px;">
+        <img src="img/12.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao13" href="http://sblaojiaoshu.com/xnhb13/" style="position: absolute; top:980px;left: 45px;">
+        <img src="img/13.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao14" href="http://sblaojiaoshu.com/xnhb14/" style="position: absolute; top:980px;left: 260px;">
+        <img src="img/14.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao15" href="http://sblaojiaoshu.com/xnhb15/" style="position: absolute; top:980px;left: 460px;">
+        <img src="img/15.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao16" href="http://sblaojiaoshu.com/xnhb16/" style="position: absolute; top:1200px;left: 45px;">
+        <img src="img/16.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao17" href="http://sblaojiaoshu.com/xnhb17/" style="position: absolute; top:1200px;left: 260px;">
+        <img src="img/17.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao18" href="http://sblaojiaoshu.com/xnhb18/" style="position: absolute; top:1200px;left: 460px;">
+        <img src="img/18.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao19" href="http://sblaojiaoshu.com/xnhb19/" style="position: absolute; top:1420px;left: 45px;">
+        <img src="img/19.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao20" href="http://sblaojiaoshu.com/xnhb20/" style="position: absolute; top:1420px;left: 260px;">
+        <img src="img/20.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao21" href="http://sblaojiaoshu.com/xnhb21/" style="position: absolute; top:1420px;left: 460px;">
+        <img src="img/21.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao22" href="http://sblaojiaoshu.com/xnhb22/" style="position: absolute; top:1640px;left: 45px;">
+        <img src="img/22.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao23" href="http://sblaojiaoshu.com/xnhb23/" style="position: absolute; top:1640px;left: 260px;">
+        <img src="img/23.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao24" href="http://sblaojiaoshu.com/xnhb24/" style="position: absolute; top:1640px;left: 460px;">
+        <img src="img/24.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao25" href="http://sblaojiaoshu.com/xnhb25/" style="position: absolute; top:1860px;left: 45px;">
+        <img src="img/25.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao26" href="http://sblaojiaoshu.com/xnhb26/" style="position: absolute; top:1860px;left: 260px;">
+        <img src="img/26.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao27" href="http://sblaojiaoshu.com/xnhb27/" style="position: absolute; top:1860px;left: 460px;">
+        <img src="img/27.png" style="width: 200px; height: 170px;">
+    </a>
+
+    <a class="ao28" href="http://sblaojiaoshu.com/xnhb28/" style="position: absolute; top:2080px;left: 45px;">
+        <img src="img/28.png" style="width: 200px; height: 170px;">
+    </a>
+
+</div>
+
+<!-- 引入 html2canvas -->
+<script src="html2canvas.js"></script>
+<!-- 引入自行封装的截图插件 -->
+<script src="screen-shot.js"></script>
+
+<script>
+    var ua = navigator.userAgent;
+    if (ua !== "Mozilla/5.0 (Windows NT 10.0; Win64; x64; ed)") {
+        document.querySelector("body").style = "display: none;"
+    }
+</script>
+
+<script>
+    // 获取组件盒子
+    let box = document.querySelector('.box')
+
+    // 获取保存按钮
+    let saveImg = document.querySelector('.save-img')
+
+    // 点击保存按钮
+    saveImg.addEventListener('click', () => {
+        saveImgFn('微信图片')
+    })
+
+    // 保存图片的方法
+    async function saveImgFn(downloadName) {
+        // 获取需要转换的dom
+        // html2canvas(document.querySelector('.bbx'))
+        //     .then(canvas => {
+        //         let imgUrl = canvas.toDataURL('image/jpg')
+        //         let image = document.createElement('img')
+        //         image.src = imgUrl
+        //         let a = document.createElement('a')
+        //         a.href = imgUrl
+        //         a.download = name // 自定义名称
+        //         a.click()
+        //     })
+
+        // 截图模块
+        let canvasBox = document.querySelector('.box')
+        // 使用自定义方法进行转换
+        await getHtmlImage({canvasBox,downloadName})
+
+    }
+
+</script>
+
+<script>
+
+    let text1 = document.querySelector(".textX810")
+    let text2 = document.querySelector(".textG1532")
+
+    twoWayBinding(text1, text2)
+    twoWayBinding(text2, text1)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+
+    let text3 = document.querySelector(".textX811")
+    let text4 = document.querySelector(".textG1533")
+
+    twoWayBinding(text3, text4)
+    twoWayBinding(text4, text3)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+
+    let text5 = document.querySelector(".textX812")
+    let text6 = document.querySelector(".textG1534")
+
+    twoWayBinding(text5, text6)
+    twoWayBinding(text6, text5)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+
+    let text7 = document.querySelector(".textX812")
+    let text8 = document.querySelector(".textG1535")
+
+    twoWayBinding(text7, text8)
+    twoWayBinding(text8, text7)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+
+    let text9 = document.querySelector(".textX814")
+    let text10 = document.querySelector(".textG1536")
+
+    twoWayBinding(text9, text10)
+    twoWayBinding(text10, text9)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+
+    let text11 = document.querySelector(".textX815")
+    let text12 = document.querySelector(".textG1537")
+
+    twoWayBinding(text11, text12)
+    twoWayBinding(text12, text11)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+
+    let text13 = document.querySelector(".textX816")
+    let text14 = document.querySelector(".textG1538")
+
+    twoWayBinding(text13, text14)
+    twoWayBinding(text14, text13)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+
+    let text15 = document.querySelector(".textX817")
+    let text16 = document.querySelector(".textG1539")
+
+    twoWayBinding(text15, text16)
+    twoWayBinding(text16, text15)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+
+    let text17 = document.querySelector(".textX818")
+    let text18 = document.querySelector(".textG1540")
+
+    twoWayBinding(text17, text18)
+    twoWayBinding(text18, text17)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+
+    let text19 = document.querySelector(".textX819")
+    let text20 = document.querySelector(".textG1541")
+
+    twoWayBinding(text19, text20)
+    twoWayBinding(text20, text19)
+
+    function twoWayBinding(ele1, ele2) {
+        ele1.addEventListener('input', () => {
+            ele2.innerText = ele1.innerText
+        })
+    }
+</script>
+
+<script>
+    // 需要保存数据的元素
+
+    let textX810 = document.querySelector('.textX810')
+    let textX811 = document.querySelector('.textX811')
+    let textX812 = document.querySelector('.textX812')
+    let textX812 = document.querySelector('.textX812')
+    let textX814 = document.querySelector('.textX814')
+    let textX815 = document.querySelector('.textX815')
+    let textX816 = document.querySelector('.textX816')
+    let textX817 = document.querySelector('.textX817')
+    let textX818 = document.querySelector('.textX818')
+    let textX819 = document.querySelector('.textX819')
+
+
+
+
+    let textG1532 = document.querySelector('.textG1532')
+    let textG1533 = document.querySelector('.textG1533')
+    let textG1534 = document.querySelector('.textG1534')
+    let textG1535 = document.querySelector('.textG1535')
+    let textG1536 = document.querySelector('.textG1536')
+    let textG1537 = document.querySelector('.textG1537')
+    let textG1538 = document.querySelector('.textG1538')
+    let textG1539 = document.querySelector('.textG1539')
+    let textG1540 = document.querySelector('.textG1540')
+    let textG1541 = document.querySelector('.textG1541')
+
+
+    getData()
+
+    // 页面初始化获取文字
+    function getData() {
+
+        let localTextX810 = localStorage.getItem('textX810')
+        let localTextX811 = localStorage.getItem('textX811')
+        let localTextX812 = localStorage.getItem('textX812')
+        let localTextX812 = localStorage.getItem('textX812')
+        let localTextX814 = localStorage.getItem('textX814')
+        let localTextX815 = localStorage.getItem('textX815')
+        let localTextX816 = localStorage.getItem('textX816')
+        let localTextX817 = localStorage.getItem('textX817')
+        let localTextX818 = localStorage.getItem('textX818')
+        let localTextX819 = localStorage.getItem('textX819')
+
+
+
+
+        let localTextG1532 = localStorage.getItem('textG1532')
+        let localTextG1533 = localStorage.getItem('textG1533')
+        let localTextG1534 = localStorage.getItem('textG1534')
+        let localTextG1535 = localStorage.getItem('textG1535')
+        let localTextG1536 = localStorage.getItem('textG1536')
+        let localTextG1537 = localStorage.getItem('textG1537')
+        let localTextG1538 = localStorage.getItem('textG1538')
+        let localTextG1539 = localStorage.getItem('textG1539')
+        let localTextG1540 = localStorage.getItem('textG1540')
+        let localTextG1541 = localStorage.getItem('textG1541')
+
+
+
+
+
+        if (localTextX810) textX810.innerText = localTextX810
+        if (localTextX811) textX811.innerText = localTextX811
+        if (localTextX812) textX812.innerText = localTextX812
+        if (localTextX812) textX812.innerText = localTextX812
+        if (localTextX814) textX814.innerText = localTextX814
+        if (localTextX815) textX815.innerText = localTextX815
+        if (localTextX816) textX816.innerText = localTextX816
+        if (localTextX817) textX817.innerText = localTextX817
+        if (localTextX818) textX818.innerText = localTextX818
+        if (localTextX819) textX819.innerText = localTextX819
+
+
+
+
+
+
+        if (localTextG1532) textG1532.innerText = localTextG1532
+        if (localTextG1533) textG1533.innerText = localTextG1533
+        if (localTextG1534) textG1534.innerText = localTextG1534
+        if (localTextG1535) textG1535.innerText = localTextG1535
+        if (localTextG1536) textG1536.innerText = localTextG1536
+        if (localTextG1537) textG1537.innerText = localTextG1537
+        if (localTextG1538) textG1538.innerText = localTextG1538
+        if (localTextG1539) textG1539.innerText = localTextG1539
+        if (localTextG1540) textG1540.innerText = localTextG1540
+        if (localTextG1541) textG1541.innerText = localTextG1541
+
+    }
+
+
+    // 保存数据的方法
+    function savaData() {
+        localStorage.setItem('textX810', textX810.innerText)
+        localStorage.setItem('textX811', textX811.innerText)
+        localStorage.setItem('textX812', textX812.innerText)
+        localStorage.setItem('textX812', textX812.innerText)
+        localStorage.setItem('textX814', textX814.innerText)
+        localStorage.setItem('textX815', textX815.innerText)
+        localStorage.setItem('textX816', textX816.innerText)
+        localStorage.setItem('textX817', textX817.innerText)
+        localStorage.setItem('textX818', textX818.innerText)
+        localStorage.setItem('textX819', textX819.innerText)
+
+
+
+
+
+        localStorage.setItem('textG1532', textG1532.innerText)
+        localStorage.setItem('textG1533', textG1533.innerText)
+        localStorage.setItem('textG1534', textG1534.innerText)
+        localStorage.setItem('textG1535', textG1535.innerText)
+        localStorage.setItem('textG1536', textG1536.innerText)
+        localStorage.setItem('textG1537', textG1537.innerText)
+        localStorage.setItem('textG1538', textG1538.innerText)
+        localStorage.setItem('textG1539', textG1539.innerText)
+        localStorage.setItem('textG1540', textG1540.innerText)
+        localStorage.setItem('textG1541', textG1541.innerText)
+
+    }
+
+</script>
+
+<script>
+
+    function getTime() {
+        let date = new Date();
+        let year = date.getFullYear();        //年 ,从 Date 对象以四位数字返回年份
+        let month = date.getMonth() + 1;      //月 ,从 Date 对象返回月份 (0 ~ 11) ,date.getMonth()比实际月份少 1 个月
+        let day = date.getDate();             //日 ,从 Date 对象返回一个月中的某一天 (1 ~ 31)
+        let hours = date.getHours();          //小时 ,返回 Date 对象的小时 (0 ~ 23)
+        let minutes = date.getMinutes();      //分钟 ,返回 Date 对象的分钟 (0 ~ 59)
+        let seconds = date.getSeconds();      //秒 ,返回 Date 对象的秒数 (0 ~ 59)
+
+        //获取当前系统时间 ( 不进行 补0 )
+        let currentDate = year + "-" + month + "-" + day + " " + hours + ":" +  minutes + ":" + seconds;
+
+        //修改月份格式
+        if (month >= 1 && month <= 9) month = "0" + month;
+        //修改日期格式
+        if (day >= 0 && day <= 9) day = "0" + day;
+        //修改小时格式
+        if (hours >= 0 && hours <= 9) hours = "0" + hours;
+        //修改分钟格式
+        if (minutes >= 0 && minutes <= 9) minutes = "0" + minutes;
+        //修改秒格式
+        if (seconds >= 0 && seconds <= 9) seconds = "0" + seconds;
+
+        //获取当前系统时间 ( 进行 补0 )
+
+        return month + "-" + day + " " + hours + ":" +  minutes;
+    }
+    function getTime1() {
+        let date = new Date();
+        let year = date.getFullYear();        //年 ,从 Date 对象以四位数字返回年份
+        let month = date.getMonth() + 1;      //月 ,从 Date 对象返回月份 (0 ~ 11) ,date.getMonth()比实际月份少 1 个月
+        let day = date.getDate();             //日 ,从 Date 对象返回一个月中的某一天 (1 ~ 31)
+        let hours = date.getHours();          //小时 ,返回 Date 对象的小时 (0 ~ 23)
+        let minutes = date.getMinutes();      //分钟 ,返回 Date 对象的分钟 (0 ~ 59)
+        let seconds = date.getSeconds();      //秒 ,返回 Date 对象的秒数 (0 ~ 59)
+
+        //获取当前系统时间 ( 不进行 补0 )
+        let currentDate = year + "-" + month + "-" + day + " " + hours + ":" +  minutes + ":" + seconds;
+
+        //修改月份格式
+        if (month >= 1 && month <= 9) month = "0" + month;
+        //修改日期格式
+        if (day >= 0 && day <= 9) day = "0" + day;
+        //修改小时格式
+        if (hours >= 0 && hours <= 9) hours = "0" + hours;
+        //修改分钟格式
+        if (minutes >= 0 && minutes <= 9) minutes = "0" + minutes;
+        //修改秒格式
+        if (seconds >= 0 && seconds <= 9) seconds = "0" + seconds;
+
+        //获取当前系统时间 ( 进行 补0 )
+
+        return month + "-" + day + " " + hours + ":" +  minutes;
+    }
+
+    let oDiv = document.querySelector('.time')
+    let aDiv = document.querySelector('.time1')
+
+    oDiv.innerHTML = getTime()
+    aDiv.innerHTML = getTime1()
+
+    function updateTime() {
+        oDiv.innerHTML = getTime()
+        aDiv.innerHTML = getTime1()
+    }
+
+</script>
+
+</body>
+</html>
